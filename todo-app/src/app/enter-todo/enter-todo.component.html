@@ -1,0 +1,8 @@
+<div class="ent-wrap">
+  <h3>enter todo</h3> 
+  <div class="ent-form">
+    <input matInput value="" placeholder="enter todo..." #newtodo>
+    <button mat-stroked-button (click)="addTodo(newtodo.value, false)">save</button>
+  </div>
+  <button mat-stroked-button class="cancel" (click)="cancelAdd()">cancel</button>
+</div>

@@ -1,0 +1,14 @@
+<h3>My ToDo's</h3>
+<ul>
+  
+  <li *ngFor="let todoList of todoLists | async; let i = index">
+    <mat-form-field>
+      <input matInput value={{todoList.todo}} (change)="updateTodo(todo.value, status.checked)" #todo>
+    </mat-form-field>
+    <mat-checkbox labelPosition="after" [checked]="todoList.status" (change)="updateTodo(todo.value, status.checked)" #status>Mark Completed</mat-checkbox>
+    <button mat-stroked-button (click)="removeTodo(i)">Delete</button>
+    
+  </li>
+</ul>
+
+<button mat-stroked-button (click)="gotoAdd()">Add Todo</button>
