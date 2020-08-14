@@ -28,7 +28,6 @@ export class ShowTodosComponent implements OnInit, OnDestroy {
   }
 
   updateTodo(todo, status) {
-    console.log(todo, status);
     this.store.dispatch(new TodoListActions.UpdateTodo({ todo: todo, status: status }));
     this.saveToStorage();
   }

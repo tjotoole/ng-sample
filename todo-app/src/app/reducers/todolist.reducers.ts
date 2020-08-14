@@ -11,10 +11,8 @@ if (window.localStorage.getItem('currentState')) {
   initialState = { ...JSON.parse(localStorage.getItem('currentState')) };
 }
 
-console.log(initialState);
-
 export function reducer(state: TodoList[] = [initialState], action: TodoListActions.Actions) {
-    console.log(state);
+
 
     switch (action.type) {
       case TodoListActions.ADD_TODO:
